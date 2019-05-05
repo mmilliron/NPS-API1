@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Search for National Parks in your state.">
+        <title>NPS API Search</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Find Your National Park!</h1>
+
+            <form class="js-form">
+                <label for="search-term">Enter one or more state abbreviations, separated by commas: </label>
+                <input type="text" name="search-term" class="js-state-entered" required>
+                <br>
+                <br>
+                <label for="max-results">Maximum results: </label>
+                <input type="number" name="max-results" class="js-result-amt" value="10">
+
+                <input type="submit" value="Go!">
+            </form>
+
+            <p class="js-error"></p>
+
+            <section class="results hidden" role="region">
+                <h2>Search results: </h2>
+                <ul class="results-list">
+                </ul>
+            </section>
+        </div>
+        <script src="index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </body>
+</html>
